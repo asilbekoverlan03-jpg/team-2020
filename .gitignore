@@ -1,0 +1,22 @@
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Virtual Environments
+.venv/
+.venv*/
+venv/
+ENV/
+
+# Database
+*.sqlite3
+db.sqlite3
+**/db.sqlite3
+
+# Python cache (во всех вложенных папках)
+pycache/
+/**/pycache/
+*.pyc
+*.pyo
+*.pyd
