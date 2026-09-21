@@ -3,7 +3,6 @@ from django.urls import path
 from todo_app.views import TaskListCreateView, TaskDetailView
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
     path("api/tasks/", TaskListCreateView.as_view()),
     path("api/tasks/<int:pk>/", TaskDetailView.as_view()),
 ]
