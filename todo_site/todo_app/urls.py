@@ -1,8 +1,8 @@
-from django.contrib import admin
 from django.urls import path
-from todo_app.views import TaskListCreateView, TaskDetailView
+from .views import TaskListCreateView, TaskDetailView, ProjectListView
 
 urlpatterns = [
     path("api/tasks/", TaskListCreateView.as_view()),
     path("api/tasks/<int:pk>/", TaskDetailView.as_view()),
+    path("api/projects/", ProjectListView.as_view()),
 ]

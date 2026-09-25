@@ -1,4 +1,5 @@
 from rest_framework import serializers
+from .models import Project
 from .models import Task, Subtask, TaskFile, Comment
 
 
@@ -44,3 +45,8 @@ class TaskSerializer(serializers.ModelSerializer):
 
     def get_overdue(self, obj):
         return obj.is_overdue()
+
+class ProjectSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Project
+        fields = "__all__"
